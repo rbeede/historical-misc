@@ -1,0 +1,7 @@
+select volume B
+
+attributes disk
+
+attributes disk set readonly
+
+attributes disk
