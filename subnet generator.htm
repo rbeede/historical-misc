@@ -1,0 +1,103 @@
+<script type="text/javascript">
+	function generateSubnetsIPv4(cidr_addr,subnet_mask_bits) {
+		var octets = cidr_addr.split(".");
+		var supernetNetworkBits = octets[3].split("/")[1];
+		octets[3] = octets[3].split("/")[0];  // drops /## part
+		
+		var resultMessage = "<pre>";
+		
+		// Convert the IP into one big number for manipulation
+		var networkAddressAsInt = parseInt(octets[0]) << 24;  // First 8 bits of address (left to right)
+		networkAddressAsInt = networkAddressAsInt ^ (parseInt(octets[1]) << 16);  // Second set of 8 bits of address
+		networkAddressAsInt = networkAddressAsInt ^ (parseInt(octets[2]) << 8);  // Second set of 8 bits of address
+		networkAddressAsInt = networkAddressAsInt ^ (parseInt(octets[3]) );  // Second set of 8 bits of address
+		// note that at this point networkAddressAsInt is still the raw IP address and not necessarily a network address (10.1.1.1/24 really falls into 10.1.1.0/24 network address)
+		// If cidr_addr includes host bits set we should clear them now (makes networkAddressAsInt become the start of the range)
+		// JavaScript can't handle 64-bit or 128-bit numbers BTW (http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
+		networkAddressAsInt = networkAddressAsInt & ((Math.pow(2, supernetNetworkBits) - 1) << (32 - supernetNetworkBits));  // The network bits are all 1's and rest is 0's to clear them out
+		
+		
+		
+		// Calculate bit sizes and offsets
+		// Number of bits for hosts (32 - subnet_mask_bits)
+		// So 32 (ipv4) minus (super) network bits minus host bits leaves us with bits available for subnet range
+		var subnetRangeBits = 32 - supernetNetworkBits - (32 - subnet_mask_bits);
+		var numberSubnetworks = Math.pow(2, subnetRangeBits);
+		var subnetHostBits = 32 - subnet_mask_bits;
+		
+ 		resultMessage += "Network address for super-net is " + integerToIPv4(networkAddressAsInt) + "/" + supernetNetworkBits + "\n";
+		resultMessage += "\n";
+		resultMessage += "Number of sub-networks (each of CIDR mask /" + subnet_mask_bits + ") is " + addCommas(numberSubnetworks) + "\n";
+		resultMessage += "\n";
+		resultMessage += "\n";
+		
+		resultMessage += "Sub-networks:" + "\n";
+		
+		// Generate all the possible ranges
+		for(var i = 0; i < numberSubnetworks; i++) {
+			var subnetworkAddress = networkAddressAsInt + (i << subnetHostBits);
+			resultMessage += "\t" + i + ":\t" + integerToIPv4(subnetworkAddress) + "/" + subnet_mask_bits + "\n";
+		}
+		
+		resultMessage += "\n";
+		resultMessage += "END\n";
+		
+		
+		resultMessage += "</pre>";
+		document.getElementById("result").innerHTML = resultMessage;
+	}
+	
+	
+	function integerToIPv4(integer) {
+		var address = "";
+		
+		address += ((integer >> 24) & 0xFF);
+		address += ".";
+		address += ((integer >> 16) & 0xFF);
+		address += ".";
+		address += ((integer >> 8) & 0xFF);
+		address += ".";
+		address += ((integer ) & 0xFF);
+		
+		return address;
+	}
+	
+	
+	// Care of http://www.mredkj.com/javascript/nfbasic.html
+	//	addCommas and addSeparatorsNF are released to the public domain.
+	//	Other content is still copyrighted
+	function addCommas(nStr)
+	{
+		nStr += '';
+		x = nStr.split('.');
+		x1 = x[0];
+		x2 = x.length > 1 ? '.' + x[1] : '';
+		var rgx = /(\d+)(\d{3})/;
+		while (rgx.test(x1)) {
+			x1 = x1.replace(rgx, '$1' + ',' + '$2');
+		}
+		return x1 + x2;
+	}
+</script>
+
+<p>
+This will generate the network address ranges of subnets from an initial super-block of a network. You provide the supernet network address and mask size (bits), the desired sub-networks mask size, and a calculation of all the possible ranges is provided.
+</p>
+
+<p>
+<labal for="ipv4_address">IPv4 Supernet CIDR Address (x.x.x.x/y):</label> <input type="text" id="ipv4_address" value="10.0.0.1/8" />
+</p>
+
+<p>
+<labal for="subnetwork_mask_bits">Sub-network Mask Bits (##):</label> <input type="text" id="subnetwork_mask_bits" value="24" />
+</p>
+
+<p>
+<button onclick="generateSubnetsIPv4(document.getElementById('ipv4_address').value, document.getElementById('subnetwork_mask_bits').value);">Calculate</button>
+</p>
+
+<p>
+TODO ipv6
+</p>
+
+<div id="result">Result will appear here</div>
