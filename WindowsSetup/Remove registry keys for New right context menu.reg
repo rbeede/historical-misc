@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\.accdb\Access.Application.16\ShellNew]
+[-HKEY_CLASSES_ROOT\.mdb\ShellNew]
+[-HKEY_CLASSES_ROOT\.pptx\PowerPoint.Show.12\ShellNew]
+[-HKEY_CLASSES_ROOT\.pub\Publisher.Document.16\ShellNew]
+[-HKEY_CLASSES_ROOT\.xlsx\Excel.Sheet.12\ShellNew]
+
+[-HKEY_CLASSES_ROOT\.rtf\ShellNew]
+
+[-HKEY_CLASSES_ROOT\.bmp\ShellNew]
