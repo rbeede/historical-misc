@@ -21,7 +21,7 @@ nameresolvers=(
 
 while true; do
   for resolver in "${nameresolvers[@]}"; do
-    nslookup ran$RANDOM.rodney.dyndns.org  $resolver
+    nslookup ran$RANDOM.localtest.me  $resolver
   done
 
   sleep 1
