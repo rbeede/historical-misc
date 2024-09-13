@@ -21,7 +21,7 @@ while($true) {
 	$RandomNumber = Get-Random
 	
 	foreach ($resolver in $nameresolvers) {
-		nslookup ran$RandomNumber.rodney.dyndns.org  $resolver
+		nslookup ran$RandomNumber.localtest.me  $resolver
 	}
 	
 	sleep 1
