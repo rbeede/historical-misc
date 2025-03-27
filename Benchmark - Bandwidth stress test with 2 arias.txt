@@ -1,0 +1,4 @@
+c:\Software\aria2-1.37.0-win-64bit-build1\aria2c.exe --file-allocation=none --allow-overwrite=true -k 2M -s 10 -j 10 -x 10 http://ubuntu.cs.utah.edu/releases/24.04/ubuntu-24.04.2-desktop-amd64.iso
+
+
+aria2c -d /dev -o null --file-allocation=none --allow-overwrite=true -k 2M -s 10 -j 10 -x 10 https://mirror.arizona.edu/ubuntu-releases/24.04/ubuntu-24.04-desktop-amd64.iso
