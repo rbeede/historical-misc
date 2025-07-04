@@ -1,4 +1,4 @@
-VAR $DELAYTIME = 10000
+VAR $DELAYTIME = 30000
 
 
 REM ================================
@@ -13,6 +13,8 @@ ESP32M ssid -a -n 'Invalid Network'
 ESP32M ssid -a -n Searching...
 ESP32M ssid -a -n Darknet
 
+ESP32M attack -t beacon -l
+ESP32M attack -t beacon -l
 ESP32M attack -t beacon -l
 
 DELAY $DELAYTIME
@@ -31,6 +33,8 @@ ESP32M ssid -a -n 👻
 ESP32M ssid -a -n 🤪🤣
 
 ESP32M attack -t beacon -l
+ESP32M attack -t beacon -l
+ESP32M attack -t beacon -l
 
 DELAY $DELAYTIME
 
@@ -47,6 +51,8 @@ ESP32M ssid -a -n 💻
 ESP32M ssid -a -n 🐈
 ESP32M ssid -a -n 'Network Error'
 
+ESP32M attack -t beacon -l
+ESP32M attack -t beacon -l
 ESP32M attack -t beacon -l
 
 DELAY $DELAYTIME
@@ -66,6 +72,8 @@ ESP32M ssid -a -n 'Mom, Click Here for Internet'
 ESP32M ssid -a -n 'Hogwarts Great Hall Wi-Fi'
 
 ESP32M attack -t beacon -l
+ESP32M attack -t beacon -l
+ESP32M attack -t beacon -l
 
 DELAY $DELAYTIME
 
@@ -82,6 +90,8 @@ ESP32M ssid -a -n '_We have Been Trying to Reach'
 ESP32M ssid -a -n '__You About Your Cars Extended'
 ESP32M ssid -a -n '___Warranty'
 
+ESP32M attack -t beacon -l
+ESP32M attack -t beacon -l
 ESP32M attack -t beacon -l
 
 DELAY $DELAYTIME
