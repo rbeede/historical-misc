@@ -1,0 +1,91 @@
+VAR $DELAYTIME = 10000
+
+
+REM ================================
+DISPLAY_CLEAR
+DISPLAY_TEXT 0 20 SSID1
+LED_G
+
+ESP32M stopscan
+ESP32M clearlist -s
+
+ESP32M ssid -a -n 'Invalid Network'
+ESP32M ssid -a -n Searching...
+ESP32M ssid -a -n Darknet
+
+ESP32M attack -t beacon -l
+
+DELAY $DELAYTIME
+
+
+REM ================================
+DISPLAY_CLEAR
+DISPLAY_TEXT 0 20 SSID2
+LED_R
+
+ESP32M stopscan
+ESP32M clearlist -s
+
+ESP32M ssid -a -n 😈
+ESP32M ssid -a -n 👻
+ESP32M ssid -a -n 🤪🤣
+
+ESP32M attack -t beacon -l
+
+DELAY $DELAYTIME
+
+
+REM ================================
+DISPLAY_CLEAR
+DISPLAY_TEXT 0 20 SSID3
+LED_B
+
+ESP32M stopscan
+ESP32M clearlist -s
+
+ESP32M ssid -a -n 💻
+ESP32M ssid -a -n 🐈
+ESP32M ssid -a -n 'Network Error'
+
+ESP32M attack -t beacon -l
+
+DELAY $DELAYTIME
+
+
+REM ================================
+DISPLAY_CLEAR
+DISPLAY_TEXT 0 20 SSID4
+LED_G
+
+ESP32M stopscan
+ESP32M clearlist -s
+
+ESP32M ssid -a -n 'YOU KIDS GET OFF MY LAN!'
+ESP32M ssid -a -n 'Van Down by the River'
+ESP32M ssid -a -n 'Mom, Click Here for Internet'
+ESP32M ssid -a -n 'Hogwarts Great Hall Wi-Fi'
+
+ESP32M attack -t beacon -l
+
+DELAY $DELAYTIME
+
+
+REM ================================
+DISPLAY_CLEAR
+DISPLAY_TEXT 0 20 SSID5
+LED_R
+
+ESP32M stopscan
+ESP32M clearlist -s
+
+ESP32M ssid -a -n '_We have Been Trying to Reach'
+ESP32M ssid -a -n '__You About Your Cars Extended'
+ESP32M ssid -a -n '___Warranty'
+
+ESP32M attack -t beacon -l
+
+DELAY $DELAYTIME
+
+
+REM ================================
+RESTART_PAYLOAD
