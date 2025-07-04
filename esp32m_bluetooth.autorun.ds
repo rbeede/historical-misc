@@ -1,0 +1,15 @@
+VAR $DELAYTIME = 30000
+
+
+REM ================================
+DISPLAY_CLEAR
+DISPLAY_TEXT 0 20 BLUETOOTH
+LED_B
+
+ESP32M stopscan
+
+ESP32M blespam -t all
+
+WAIT_FOR_BUTTON_PRESS
+
+RESTART_PAYLOAD
