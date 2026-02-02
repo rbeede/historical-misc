@@ -1,3 +1,5 @@
+# number of ssid is hardware dependent
+
 root@OpenWrt:/etc/config# cat /etc/config/wireless
 
 config wifi-device 'radio0'
@@ -152,3 +154,15 @@ config wifi-iface 'wifinet16'
         option encryption 'psk2+ccmp'
         option key 'InsertSomePasswordHere'
         option network 'lan'
+
+##################
+# Other candidates
+
+#option ssid 'Better than the jones\'s'
+
+#option ssid 'CIA Counter-surveillance'
+
+#option ssid 'Darknet'
+
+#option ssid 'EmeraldCity'
+
