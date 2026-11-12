@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0">
-  <head>
-    <title>Cybersecurity News and Vulns</title>
-  </head>
-  <body>
-    <outline text="Community" title="Community">
-      <outline type="rss" text="Lobsters - security" title="Lobsters - security" xmlUrl="https://lobste.rs/t/security.rss" htmlUrl="https://lobste.rs/t/security"/>
-      <outline type="rss" text="infosec.exchange - #netsec" title="infosec.exchange - #netsec" xmlUrl="https://infosec.exchange/tags/netsec.rss" htmlUrl="https://infosec.exchange/tags/netsec"/>
-      <outline type="rss" text="Hacker News - security (filtered, 50+ points)" title="Hacker News - security (filtered, 50+ points)" xmlUrl="https://hnrss.org/newest?q=CVE+OR+vulnerability+OR+exploit&amp;points=50" htmlUrl="https://news.ycombinator.com/"/>
-    </outline>
-    <outline text="Disclosure Lists" title="Disclosure Lists">
-      <outline type="rss" text="oss-security (via SecLists)" title="oss-security (via SecLists)" xmlUrl="https://seclists.org/rss/oss-sec.rss" htmlUrl="https://seclists.org/oss-sec/"/>
-      <outline type="rss" text="Full Disclosure (via SecLists)" title="Full Disclosure (via SecLists)" xmlUrl="https://seclists.org/rss/fulldisclosure.rss" htmlUrl="https://seclists.org/fulldisclosure/"/>
-    </outline>
-    <outline text="Vulnerabilities and Advisories" title="Vulnerabilities and Advisories">
-      <outline type="rss" text="CISA Cybersecurity Advisories" title="CISA Cybersecurity Advisories" xmlUrl="https://www.cisa.gov/cybersecurity-advisories/all.xml" htmlUrl="https://www.cisa.gov/news-events/cybersecurity-advisories"/>
-      <outline type="rss" text="Exploit-DB" title="Exploit-DB" xmlUrl="https://www.exploit-db.com/rss.xml" htmlUrl="https://www.exploit-db.com/"/>
-      <outline type="rss" text="Zero Day Initiative - Published Advisories" title="Zero Day Initiative - Published Advisories" xmlUrl="https://www.zerodayinitiative.com/rss/published/" htmlUrl="https://www.zerodayinitiative.com/advisories/published/"/>
-      <outline type="rss" text="Google Project Zero" title="Google Project Zero" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/"/>
-    </outline>
-    <outline text="News and Analysis" title="News and Analysis">
-      <outline type="rss" text="Krebs on Security" title="Krebs on Security" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com/"/>
-      <outline type="rss" text="BleepingComputer" title="BleepingComputer" xmlUrl="https://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/"/>
-      <outline type="rss" text="SANS Internet Storm Center" title="SANS Internet Storm Center" xmlUrl="https://isc.sans.edu/rssfeed.xml" htmlUrl="https://isc.sans.edu/"/>
-      <outline type="rss" text="Schneier on Security" title="Schneier on Security" xmlUrl="https://www.schneier.com/feed/atom/" htmlUrl="https://www.schneier.com/"/>
-      <outline type="rss" text="Risky Bulletin" title="Risky Bulletin" xmlUrl="https://risky.biz/feeds/risky-bulletin/" htmlUrl="https://risky.biz/"/>
-    </outline>
-  </body>
+<opml version="1.1">
+<head><title>subscriptions</title></head>
+<body>
+  <outline text="Community">
+    <outline type="rss" text="Hacker News - security (filtered, 50+ points)" xmlUrl="https://hnrss.org/newest?q=CVE+OR+vulnerability+OR+exploit&amp;points=50" htmlUrl="https://news.ycombinator.com/"/>
+    <outline type="rss" text="infosec.exchange - #netsec" xmlUrl="https://infosec.exchange/tags/netsec.rss" htmlUrl="https://infosec.exchange/tags/netsec"/>
+    <outline type="rss" text="Lobsters - security" xmlUrl="https://lobste.rs/t/security.rss" htmlUrl="https://lobste.rs/t/security"/>
+    <outline type="rss" text="PortSwigger Research" xmlUrl="https://portswigger.net/research/rss" htmlUrl="https://portswigger.net/research/rss"/>
+  </outline>
+  <outline text="Disclosure Lists">
+    <outline type="rss" text="Full Disclosure (via SecLists)" xmlUrl="https://seclists.org/rss/fulldisclosure.rss" htmlUrl="https://seclists.org/fulldisclosure/"/>
+    <outline type="rss" text="oss-security (via SecLists)" xmlUrl="https://seclists.org/rss/oss-sec.rss" htmlUrl="https://seclists.org/oss-sec/"/>
+  </outline>
+  <outline text="News and Analysis">
+    <outline type="rss" text="BleepingComputer" xmlUrl="https://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/"/>
+    <outline type="rss" text="Krebs on Security" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com/"/>
+    <outline type="rss" text="Risky Bulletin" xmlUrl="https://risky.biz/feeds/risky-bulletin/" htmlUrl="https://risky.biz/"/>
+    <outline type="rss" text="SANS Internet Storm Center" xmlUrl="https://isc.sans.edu/rssfeed.xml" htmlUrl="https://isc.sans.edu/"/>
+    <outline type="rss" text="Schneier on Security" xmlUrl="https://www.schneier.com/feed/atom/" htmlUrl="https://www.schneier.com/"/>
+    <outline type="rss" text="Slashdot" xmlUrl="https://slashdot.org/slashdot.rss" htmlUrl="https://slashdot.org/"/>
+    <outline type="rss" text="The Trail of Bits Blog" xmlUrl="https://blog.trailofbits.com/feed/" htmlUrl="https://blog.trailofbits.com/feed/"/>
+  </outline>
+  <outline text="Vulnerabilities and Advisories">
+    <outline type="rss" text="CISA Cybersecurity Advisories" xmlUrl="https://www.cisa.gov/cybersecurity-advisories/all.xml" htmlUrl="https://www.cisa.gov/news-events/cybersecurity-advisories"/>
+    <outline type="rss" text="Exploit-DB" xmlUrl="https://www.exploit-db.com/rss.xml" htmlUrl="https://www.exploit-db.com/"/>
+    <outline type="rss" text="Google Project Zero" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/"/>
+    <outline type="rss" text="Zero Day Initiative - Published Advisories" xmlUrl="https://www.zerodayinitiative.com/rss/published/" htmlUrl="https://www.zerodayinitiative.com/advisories/published/"/>
+  </outline>
+</body>
 </opml>
